@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { onMounted } from 'vue'
 import ButtonCustom from '@/components/base/ButtonCustom.vue'
 import { useRouter } from 'vue-router'
 
@@ -7,7 +7,7 @@ const router = useRouter()
 
 const handleAlert = () => {
     alert('trigger btn')
-    router.push('/')
+    router.push('/about')
 }
 
 onMounted(() => {
