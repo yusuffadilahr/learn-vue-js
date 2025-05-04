@@ -4,6 +4,7 @@ import About from '../pages/About.vue'
 import HomeDashboard from "@/pages/dashboard/HomeDashboard.vue"
 import Cookies from 'js-cookie'
 import Register from "@/pages/auth/Register.vue"
+import Login from "@/pages/auth/Login.vue"
 
 const routes = [
     {
@@ -17,18 +18,25 @@ const routes = [
         component: About,
         meta: { requiresAuth: true }
     },
-    {
-        path: '/register',
-        name: 'Registrasi',
-        component: Register
-    },
-
+    
     /* protected-route */
     {
         path: '/dashboard',
         name: 'Dashboard Admin',
         component: HomeDashboard,
         meta: { requiresAuth: true }
+    },
+    
+    /* protected-routed-auth */
+    {
+        path: '/register',
+        name: 'Registrasi',
+        component: Register
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login,
     }
 ]
 
